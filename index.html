@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image Puzzle</title>
+  <link rel="stylesheet" href="tiles.css">
+
+</head>
+
+<body>
+  <div id=""top>
+    <button id="Home" onclick="window.location.reload()" hidden>Home</button>
+    <h2 class="neonText" id="titre">The NeonPossible Game    </h2>
+  </div>
+ 
+  <h3 class="neonText" id="rulyes" >Press shuffle to generate an image or upload your own!</h2>
+  <form id="form">
+    <label class="neonText" for="image_input">Choose an image:</label>
+    
+    <input type="file" id="image_input" name="image_input" accept="image/*" onchange="previewImage(event)">
+  </form>
+  <br>
+  <div id="parent-img">
+    <img id="repreview" src="city.png" alt="Image preview">
+    <img id="preview" src="" alt="">
+  </div>
+  <div id="puzzle"></div>
+  <div id="parent">
+    <div id="grid-container"></div>
+  </div>
+
+  <div id="buttons">
+  
+    <button id="shuffle">Shuffle</button>
+  </div>
+
+  <h3 class="neonText" id="rules" hidden>Click on any tile to move it, good luck!</h2>
+  <script src="tiles.js"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
